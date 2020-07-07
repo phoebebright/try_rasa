@@ -1,0 +1,29 @@
+[
+  {
+    "text": "show me competitions for Young Riders",
+    "entities": [
+      {
+        "start": 25,
+        "end": 37,
+        "value": "Young Riders",
+        "entity": "competition"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "session_type",
+        "start": 8,
+        "end": 20,
+        "value": "competitions",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "competition",
+        "start": 25,
+        "end": 37,
+        "value": "Young Riders",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

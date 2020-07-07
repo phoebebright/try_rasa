@@ -1,0 +1,130 @@
+[
+  {
+    "text": "Hi bot",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.9538966417312622
+    }
+  },
+  {
+    "text": "Hey bot",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.708685040473938
+    }
+  },
+  {
+    "text": "goodnight",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.4695260524749756
+    }
+  },
+  {
+    "text": "good night",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5836779475212097
+    }
+  },
+  {
+    "text": "toodle-oo",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.25129881501197815
+    }
+  },
+  {
+    "text": "so long",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.37286847829818726
+    }
+  },
+  {
+    "text": "gotta go",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.4146486222743988
+    }
+  },
+  {
+    "text": "farewell",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.28570789098739624
+    }
+  },
+  {
+    "text": "Thanks",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.478797048330307
+    }
+  },
+  {
+    "text": "Thank you",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.2779843509197235
+    }
+  },
+  {
+    "text": "Thank you so much",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.21038319170475006
+    }
+  },
+  {
+    "text": "Thanks bot",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.9779365062713623
+    }
+  },
+  {
+    "text": "Thanks for that",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.44702690839767456
+    }
+  },
+  {
+    "text": "cheers",
+    "intent": "thank",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.8274621963500977
+    }
+  },
+  {
+    "text": "what's on now?",
+    "intent": "whats_on",
+    "intent_prediction": {
+      "name": "whats_on_next",
+      "confidence": 0.34130170941352844
+    }
+  },
+  {
+    "text": "show me what's on in arena 1",
+    "intent": "whats_on",
+    "intent_prediction": {
+      "name": "whats_on_next",
+      "confidence": 0.4386691451072693
+    }
+  }
+]
