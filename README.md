@@ -8,10 +8,12 @@ Arriving at Event
 Checkin
 
 - identify event (from time/location)
+
 - identify user or type of user
     competitior, judge, support
 - I can help you with
 
+- what is the weather forecast
 
 
 
@@ -90,6 +92,11 @@ sys.argv.append('actions')
 from rasa.__main__ import main
 main()
 
+check action server::
+
+    curl http://localhost:5055/health
+
+    curl http://localhost:5055/actions
 
 Ask for info to put in slot and display back
 ---------------------------------------------
@@ -127,6 +134,20 @@ story::
     * select_color
         - utter_fav_color
         
+intents::
+
+    ## intent:whats_on
+    - what's on now?
+    - show me the schedule
+    - whats on
+    - schedule
+    - what's on in [arena 1](arena)
+    
+    ## intent:whats_my_color
+    - what's the best color
+    - which color?
+    
+    
 
 
 Old version

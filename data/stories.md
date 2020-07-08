@@ -35,12 +35,9 @@
   - utter_greet
 * whats_on
     - action_show_schedule
+
     
-## whats_my_color
-* greet
-    - utter_greet
-* whats_my_color
-    - utter_ask_color
-* select_color
-    - utter_fav_color
+## get the weather
+* get_weather
+    - action_weather
     

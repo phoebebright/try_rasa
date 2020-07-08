@@ -1,3 +1,4 @@
+
 ## intent:greet
 - Hi
 - Hey
@@ -29,6 +30,7 @@
 - Thanks bot
 - Thanks for that
 - cheers
+
 ## intent:affirm
 - yes
 - indeed
@@ -71,6 +73,14 @@
 - are you a human?
 - am I talking to a bot?
 - am I talking to a human?
+- are you real?
+
+## intent:get_weather
+- what's the weather
+- what's the weather here
+- what is the weather
+- whats the weather
+- weather?
 
 ## intent:whats_on
 - what's on now?
@@ -79,7 +89,5 @@
 - schedule
 - what's on in [arena 1](arena)
 
-## intent:whats_my_color
-- what's the best color
-- which color?
+
 

@@ -8,14 +8,28 @@ intents:
   - mood_unhappy
   - bot_challenge
   - whats_on
+  - get_weather
 
 entities:
   - arena
 
 
 responses:
+
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Welcome to the Castlefreke Dressage Show.  I'm the event bot and I can help you quickly get information about the show. I can help you better if I know your role?"
+    buttons:
+        - title: "I'm a competitor"
+          payload: '/choose{"user_type": "competitor"}'
+        - title: "I'm supporting a competitor"
+          payload: '/choose{"user_type": "support"}'
+        - title: "I'm a judge"
+          payload: '/choose{"user_type": "judge"}'
+        - title: "I'm a spectator"
+          payload: '/choose{"user_type": "spectator"}'
+        - title: "I'm part of the event team"
+          payload: '/choose{"user_type": "team"}'
+
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -31,29 +45,28 @@ responses:
   - text: "Bye"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "I am a bot!  You can ask me all kinds of questions about this event.  Go on get creative!"
 
-  utter_ask_color:
-  - text: "what color would you like?"
-    buttons:
-    - title: "blue"
-      payload: '/choose{"favorite_color": "blue"}'
-    - title: "red"
-      payload: '/choose{"favorite_color": "red"}'
 
-  utter_fav_color:
-    - text: "{favorite_color}  looks great."
 
-  select_color:
-    - text: "{favorite_color}"
 
 actions:
   - action_show_schedule
+  - action_weather
 
 slots:
-  favorite_color:
+  location:
     type: text
-    initial_value: "white"
+
+
+  user_type:
+     type: categorical
+     values:
+        - competitor
+        - supporting
+        - judge
+        - spectator
+        - team
 
 session_config:
   session_expiration_time: 60
