@@ -344,3 +344,10 @@ data/lookups/competitions.txt
 - The winner of the [Speed Stages](competition) is [Cormac Hanley](rider) riding [Copain Z](horse)
 
 
+Generating Data for a show
+----------------------------
+
+https://rodrigopivi.github.io/Chatito/
+
+https://yuukanoo.github.io/tracy/#/agents
+

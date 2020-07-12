@@ -47,6 +47,18 @@ responses:
       your role?
   utter_welcome_competitor:
   - text: I can check your entries...
+  utter_welcome_support:
+  - text: Which competitor(s) are you supporting.  I can check their schedule...
+  utter_welcome_judge:
+  - text: Login to get a copy of your schedule and receive  updates during the day.
+  utter_welcome_spectator:
+  - text: Would you like to know what classes are on now?
+  utter_welcome_team:
+  - text: Please check in to let Mary the Organiser know you are available.
+
+  utter_whats_on_now:
+  - text: Arena 1 - Preliminary Dressage Test DI 13 sponsored by Horseware Ireland, Arena 2 - Medium Dressage DI M57 sponsored by Bucus
+
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Here is something to cheer you up:'
