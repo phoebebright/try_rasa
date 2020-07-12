@@ -82,12 +82,33 @@
 - whats the weather
 - weather?
 
+## intent:how_to_enter
+- where do I enter?
+- where can I enter?
+- who is doing the entries?
+- how do I enter?
+
+
 ## intent:whats_on
 - what's on now?
 - show me the schedule
 - whats on
 - schedule
 - what's on in [arena 1](arena)
+- which competition is happening in [arena 1](arena)
+
+## intent:competitor
+- competitor
+- I am a competitor
+
+## synonym: session
+- competition
+- clinic
+- class
+- competitions
+- clinics
+- classes
 
 
 
+ 

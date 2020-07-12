@@ -3,6 +3,13 @@ rasa run -m models --enable-api --cors "*" --debug
 http://localhost:63342/rasa_try/index.html?_ijt=mvgviqcssg7i08n86p14t189jb
 
 
+https://github.com/RasaHQ/rasa/tree/master/examples/concertbot/
+
+javascript widget:
+https://github.com/JiteshGaikwad/Chatbot-Widget
+
+
+
 Arriving at Event
 
 Checkin

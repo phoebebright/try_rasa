@@ -1,73 +1,83 @@
-intents:
-  - greet
-  - goodbye
-  - thank
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - whats_on
-  - get_weather
-
-entities:
-  - arena
-
-
-responses:
-
-  utter_greet:
-  - text: "Welcome to the Castlefreke Dressage Show.  I'm the event bot and I can help you quickly get information about the show. I can help you better if I know your role?"
-    buttons:
-        - title: "I'm a competitor"
-          payload: '/choose{"user_type": "competitor"}'
-        - title: "I'm supporting a competitor"
-          payload: '/choose{"user_type": "support"}'
-        - title: "I'm a judge"
-          payload: '/choose{"user_type": "judge"}'
-        - title: "I'm a spectator"
-          payload: '/choose{"user_type": "spectator"}'
-        - title: "I'm part of the event team"
-          payload: '/choose{"user_type": "team"}'
-
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot!  You can ask me all kinds of questions about this event.  Go on get creative!"
-
-
-
-
-actions:
-  - action_show_schedule
-  - action_weather
-
-slots:
-  location:
-    type: text
-
-
-  user_type:
-     type: categorical
-     values:
-        - competitor
-        - supporting
-        - judge
-        - spectator
-        - team
-
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- thank
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- whats_on
+- get_weather
+- how_to_enter
+- choose
+- competitor
+entities:
+- arena
+- user_type
+slots:
+  location:
+    type: text
+  user_type:
+    type: categorical
+    values:
+    - competitor
+    - supporting
+    - judge
+    - spectator
+    - team
+responses:
+  utter_greet:
+  - buttons:
+    - payload: '/choose{"user_type": "competitor"}'
+      title: I'm a competitor
+    - payload: '/choose{"user_type": "support"}'
+      title: I'm supporting a competitor
+    - payload: '/choose{"user_type": "judge"}'
+      title: I'm a judge
+    - payload: '/choose{"user_type": "spectator"}'
+      title: I'm a spectator
+    - payload: '/choose{"user_type": "team"}'
+      title: I'm part of the event team
+    text: Welcome to the Castlefreke Dressage Show.  I'm the event bot and I can help
+      you quickly get information about the show. I can help you better if I know
+      your role?
+  utter_welcome_competitor:
+  - text: I can check your entries...
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot!  You can ask me all kinds of questions about this event.  Go
+      on get creative!
+  utter_how_to_enter:
+  - buttons:
+    - payload: https://skor.ie
+      title: I want to enter online
+    - payload: http:/.ie/map.jpg
+      title: show me a map
+    text: You can enter online or entries are being taken in the tent next to Arena
+      1
+  utter_arena_1_schedule:
+  - text: text
+actions:
+- action_show_schedule
+- action_weather
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_how_to_enter
+- utter_arena_1_schedule
+- utter_welcome_competitor

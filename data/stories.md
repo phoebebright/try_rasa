@@ -41,3 +41,16 @@
 * get_weather
     - action_weather
     
+## where to enter
+* greet
+  - utter_greet
+* how_to_enter
+    - utter_how_to_enter
+      
+## choose competitor
+* competitor
+    - utter_welcome_competitor
+    
+## schedule in location
+* whats_on {"arena": "arena 1"}
+    - utter_arena_1_schedule

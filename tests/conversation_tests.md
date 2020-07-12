@@ -53,3 +53,7 @@
 ## show schedule
 * whats_on: what's on?
    - action_show_schedule
+   
+ ## help me enter
+ * enter: how do I enter?
+    - utter_how_to_enter_
