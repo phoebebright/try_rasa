@@ -67,3 +67,24 @@
 ## schedule in location
 * whats_on {"arena": "arena 1"}
     - utter_arena_1_schedule
+    
+## Query Knowledge Base
+* query_knowledge_base
+  - action_query_knowledge_base    
+## Happy path 3
+* greet
+  - utter_greet
+* query_knowledge_base
+  - action_query_knowledge_base
+* goodbye
+  - utter_goodbye
+
+## Happy path 4
+* greet
+  - utter_greet
+* query_knowledge_base
+  - action_query_knowledge_base
+* query_knowledge_base
+  - action_query_knowledge_base
+* goodbye
+  - utter_goodbye

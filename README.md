@@ -1,6 +1,33 @@
 rasa train
 rasa run -m models --enable-api --cors "*" --debug
+
+run action server using pycharm configuration
+
 http://localhost:63342/rasa_try/index.html?_ijt=mvgviqcssg7i08n86p14t189jb
+
+
+TODO
+-----
+
+! have a greeting when you open the chat
+! whats on
+! my entries
+! how do I enter?
+! map - show map with location and guide user there when they are ready
+! checkin
+-! rules for tack
+! I need a vet
+! where do I park (car, trailer, truck)
+
+
+Knowledgebase
+-------------
+https://rasa.com/docs/rasa/core/knowledge-bases/#create-a-knowledge-base
+https://blog.rasa.com/integrating-rasa-with-knowledge-bases/
+https://github.com/RasaHQ/tutorial-knowledge-base/blob/master/actions.py
+https://github.com/scholrly/neo4django
+
+
 
 
 https://github.com/RasaHQ/rasa/tree/master/examples/concertbot/
@@ -351,3 +378,12 @@ https://rodrigopivi.github.io/Chatito/
 
 https://yuukanoo.github.io/tracy/#/agents
 
+
+## synonym: session
+# redefine using format {"entity": "city", "value": "New York City"}
+#- competition
+#- clinic
+#- class
+#- competitions
+#- clinics
+#- classes

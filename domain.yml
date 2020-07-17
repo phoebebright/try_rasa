@@ -15,9 +15,20 @@ intents:
 - how_to_enter
 - choose
 - competitor
+- query_knowledge_base
 entities:
 - arena
 - user_type
+- service_provider
+- facility
+- object_type
+- mention
+- attribute
+- hotel
+- restaurant
+- cuisine
+- city
+
 slots:
   location:
     type: text
@@ -29,6 +40,22 @@ slots:
     - judge
     - spectator
     - team
+  object_type:
+    type: unfeaturized
+  mention:
+    type: unfeaturized
+  attribute:
+    type: unfeaturized
+  hotel:
+    type: unfeaturized
+  restaurant:
+    type: unfeaturized
+  cuisine:
+    type: unfeaturized
+  city:
+    type: unfeaturized
+  service_provider:
+    type: unfeaturized
 responses:
   utter_greet:
   - buttons:
@@ -81,6 +108,7 @@ responses:
       1
   utter_arena_1_schedule:
   - text: text
+
 actions:
 - action_show_schedule
 - action_weather
@@ -93,3 +121,5 @@ actions:
 - utter_how_to_enter
 - utter_arena_1_schedule
 - utter_welcome_competitor
+- action_query_knowledge_base
+
