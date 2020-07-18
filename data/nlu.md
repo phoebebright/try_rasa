@@ -102,27 +102,15 @@
 - I am a competitor
 
 ## intent:need_service_provider
-#- I need a [vet](service_provider)
-#- I need a [doctor](service_provider)
-#- I need [first aid](service_provider)
-#- I need a [farrier](service_provider)
-#- I need a [blacksmith]{"entity": "service_provider", "value": "farrier"}
-#- my horse has lost a shoe {"entity": "service_provider", "value": "farrier"}
-
-
-## intent:need_facility
-- I need a [toilet](facility)
-- I need [water](facility)
-
+- I need a [vet](service_type)
+- I need a [doctor](service_type)
+- I need [first aid](service_type)
+- I need a [farrier](service_type)
+- I need a [blacksmith]{"entity": "service_type", "value": "farrier"}
+- my horse has lost a shoe {"entity": "service_type", "value": "farrier"}
 
 
 ## intent:query_knowledge_base
-- I need a [vet](service_provider)
-- I need a [doctor](service_provider)
-- I need [first aid](service_provider)
-- I need a [farrier](service_provider)
-- I need a [blacksmith]{"entity": "service_provider", "value": "farrier"}
-- my horse has lost a shoe {"entity": "service_provider", "value": "farrier"}
 - what [restaurants](object_type:restaurant) can you recommend?
 - list some [restaurants](object_type:restaurant)
 - can you name some [restaurants](object_type:restaurant) please?
@@ -154,6 +142,10 @@
 - what is the [star rating](attribute:star-rating) of [Berlin Wall Hostel](hotel)?
 - Does the [Hilton](hotel) has a [swimming pool](attribute:swimming-pool)?
 
+## lookup:service_provider
+- vet
+- farrier
+- doctor
 
 ## lookup:restaurant
 - Donath

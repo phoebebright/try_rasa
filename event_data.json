@@ -1,0 +1,28 @@
+{
+  "service_provider": [
+    {
+      "id": 0,
+      "service_type": "farrier",
+      "name": "Fred Shoes",
+      "mobile": "086 123 4567"
+    },
+    {
+      "id": 1,
+      "service_type": "farrier",
+      "name": "J Clop",
+      "mobile": "086 123 4568"
+    },
+    {
+      "id": 3,
+      "service_type": "vet",
+      "name": "Don Stitch",
+      "mobile": "086 444 4568"
+    },
+    {
+      "id": 4,
+      "service_type": "doctor",
+      "name": "Dr. Mick Pill",
+      "mobile": "086 333 4568"
+    }
+  ]
+}

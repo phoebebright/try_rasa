@@ -18,7 +18,7 @@ TODO
 -! rules for tack
 ! I need a vet
 ! where do I park (car, trailer, truck)
-
+! I need a [something that is not in the database] - currently calls whatever is in the slot - how to clear the slot?
 
 Knowledgebase
 -------------
@@ -27,9 +27,23 @@ https://blog.rasa.com/integrating-rasa-with-knowledge-bases/
 https://github.com/RasaHQ/tutorial-knowledge-base/blob/master/actions.py
 https://github.com/scholrly/neo4django
 
+These are the default names::
+
+    SLOT_MENTION = "mention"
+    SLOT_OBJECT_TYPE = "object_type"
+    SLOT_ATTRIBUTE = "attribute"
+    SLOT_LISTED_OBJECTS = "knowledge_base_listed_objects"
+    SLOT_LAST_OBJECT = "knowledge_base_last_object"
+    SLOT_LAST_OBJECT_TYPE = "knowledge_base_last_object_type"
 
 
 
+https://forum.rasa.com/t/faq-bot-knowledge-base/742/15
+https://stackoverflow.com/questions/60734906/convert-faq-json-file-into-rasa-nlu-and-stories-files
+
+
+Examples
+------------
 https://github.com/RasaHQ/rasa/tree/master/examples/concertbot/
 
 javascript widget:
@@ -377,6 +391,20 @@ Generating Data for a show
 https://rodrigopivi.github.io/Chatito/
 
 https://yuukanoo.github.io/tracy/#/agents
+
+## intent:need_service_provider
+#- I need a [vet](service_provider)
+#- I need a [doctor](service_provider)
+#- I need [first aid](service_provider)
+#- I need a [farrier](service_provider)
+#- I need a [blacksmith]{"entity": "service_provider", "value": "farrier"}
+#- my horse has lost a shoe {"entity": "service_provider", "value": "farrier"}
+
+
+## intent:need_facility
+- I need a [toilet](facility)
+- I need [water](facility)
+
 
 
 ## synonym: session

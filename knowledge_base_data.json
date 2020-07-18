@@ -1,19 +1,6 @@
 
 {
-    "service_provider": [
-        {
-            "id": 0,
-            "service_type": "farrier",
-            "name": "Fred Shoes",
-            "mobile": "086 123 4567"
-        },
-        {
-            "id": 1,
-            "service_type": "farrier",
-            "name": "J Clop",
-            "mobile": "086 123 4568"
-        }
-    ],
+
     "restaurant": [
         {
             "id": 0,

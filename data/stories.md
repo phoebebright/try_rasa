@@ -88,3 +88,9 @@
   - action_query_knowledge_base
 * goodbye
   - utter_goodbye
+  
+## Need a vet
+* need_service_provider {"service_type": "vet"}
+  - action_service_providers
+* goodbye
+  - utter_goodbye

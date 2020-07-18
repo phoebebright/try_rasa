@@ -16,10 +16,13 @@ intents:
 - choose
 - competitor
 - query_knowledge_base
+- need_service_provider
+
 entities:
 - arena
 - user_type
 - service_provider
+- service_type
 - facility
 - object_type
 - mention
@@ -55,6 +58,8 @@ slots:
   city:
     type: unfeaturized
   service_provider:
+    type: unfeaturized
+  service_type:
     type: unfeaturized
 responses:
   utter_greet:
@@ -122,4 +127,5 @@ actions:
 - utter_arena_1_schedule
 - utter_welcome_competitor
 - action_query_knowledge_base
+- action_service_providers
 
