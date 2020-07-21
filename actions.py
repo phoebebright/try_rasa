@@ -57,9 +57,7 @@ class ShowSchedule(Action):
 
         return []
 
-class ShowServiceProviders(ActionQueryKnowledgeBase):
-
-
+class ShowServices(ActionQueryKnowledgeBase):
 
     def __init__(self):
         # load knowledge base with data from the given file
@@ -109,9 +107,20 @@ class ShowServiceProviders(ActionQueryKnowledgeBase):
             dispatcher.utter_message("I can't help you with that.  Try asking for something else :-)")
             return []
 
-        service_type = tracker.slots["service_type"]
-        object_type = "service_provider"
-        attribute = "service_type"
+        entity_types = [item['entity'] for item in tracker.latest_message['entities']]
+
+        if 'service_type' in entity_types:
+            service_type = tracker.slots["service_type"]
+            object_type = "service_provider"
+            attribute = "service_type"
+        elif 'service' in entity_types:
+            service_type = tracker.slots["service"]
+            object_type = "service"
+            attribute = "service_type"
+        else:
+            dispatcher.utter_message("I can't help you with that.  Try asking for something else :-)")
+            return []
+
 
         objects = self.knowledge_base.data[object_type]
 
@@ -125,7 +134,7 @@ class ShowServiceProviders(ActionQueryKnowledgeBase):
                 )
             )
 
-        response = f"The following {service_type}s are avilable :\n" + '\n '.join([f"{obj['name']} call {obj['mobile']}" for obj in objects])
+        response = f"The following {service_type}s are available :\n" + '\n '.join([f"{obj['name']} call {obj['mobile']}" for obj in objects])
 
         dispatcher.utter_message(response)
 
@@ -150,6 +159,80 @@ class ShowServiceProviders(ActionQueryKnowledgeBase):
     #     dispatcher.utter_message(text=text)
     #
     #     return []
+
+
+class TestSheetKB(ActionQueryKnowledgeBase):
+
+    def __init__(self):
+        # load knowledge base with data from the given file
+        knowledge_base = InMemoryKnowledgeBase("kb_data/testsheets.json")
+
+
+        # # overwrite the representation function of the hotel object
+        # # by default the representation function is just the name of the object
+        knowledge_base.set_representation_function_of_object(
+            "testsheets", lambda obj: obj["name"] + " (" + obj["code"] + ")"
+        )
+
+        super().__init__(knowledge_base)
+
+
+    def name(self) -> Text:
+        return "action_show_testsheet"
+
+
+    async def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        """
+        Executes this action. If the user ask a question about an attribute,
+        the knowledge base is queried for that attribute. Otherwise, if no
+        attribute was detected in the request or the user is talking about a new
+        object type, multiple objects of the requested type are returned from the
+        knowledge base.
+
+        Args:
+            dispatcher: the dispatcher
+            tracker: the tracker
+            domain: the domain
+
+        Returns: list of slots
+
+        """
+
+        # slot testsheets holds all the testsheets related to this person.
+        # if they are a spectator, all the ones they have made enquiries about
+        # if the are a competitor, it should be preloaded with the tests they are riding today
+
+
+        entity_types = [item['entity'] for item in tracker.latest_message['entities']]
+
+        testsheet = tracker.slots["testsheet"]
+        object_type = "testsheet"
+        attribute = "code"
+
+
+
+        objects = self.knowledge_base.data[object_type]
+
+        # filter objects by attributes
+        if service_type:
+            objects = list(
+                filter(
+                    lambda obj:
+                                obj[attribute] == service_type
+                                , objects,
+                )
+            )
+
+        response = f"The following {service_type}s are available :\n" + '\n '.join([f"{obj['name']} call {obj['mobile']}" for obj in objects])
+
+        dispatcher.utter_message(response)
+
+        return []
 
 class ActionMyKB(ActionQueryKnowledgeBase):
     def __init__(self):

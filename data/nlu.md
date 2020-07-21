@@ -109,6 +109,21 @@
 - I need a [blacksmith]{"entity": "service_type", "value": "farrier"}
 - my horse has lost a shoe {"entity": "service_type", "value": "farrier"}
 
+## intent: need_service
+- I need some [tea]{"entity": "service", "value": "refreshments"}
+- I need some [coffee]{"entity": "service", "value": "refreshments"}
+- I'm hungry{"entity": "service", "value": "refreshments"}
+- Is there a [cafe](service) at this event?
+- I need the [toilet](service)
+- Is there a [loo]{"entity": "service", "value": "toilet"}
+- Can  you direct me to the [restroom]{"entity": "service", "value": "toilet"}?
+
+## intent: show_me_testsheet
+- do you have a copy of [DI P15]{"entity": "testsheet", "value": "DI P15"}
+- do you have a copy of [P15]{"entity": "testsheet", "value": "DI P15"}
+- show me testsheet [BD39]{"entity": "testsheet", "value": "BD 39"}
+- I need to see [di e44]{"entity": "testsheet", "value": "DI E44"}
+- show me test [bd 18]
 
 ## intent:query_knowledge_base
 - what [restaurants](object_type:restaurant) can you recommend?

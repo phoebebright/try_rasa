@@ -41,6 +41,9 @@ These are the default names::
 https://forum.rasa.com/t/faq-bot-knowledge-base/742/15
 https://stackoverflow.com/questions/60734906/convert-faq-json-file-into-rasa-nlu-and-stories-files
 
+? Build fresh for each event
+? Combine different areas of expertise - eg. module for dressage tests may or may not be included
+
 
 Examples
 ------------

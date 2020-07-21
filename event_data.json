@@ -24,5 +24,19 @@
       "name": "Dr. Mick Pill",
       "mobile": "086 333 4568"
     }
+  ],
+  "services" : [
+        {
+      "id": 0,
+      "service_type": "refreshments",
+      "name": "The Cafe",
+      "location": "in the indoor school."
+    },
+            {
+      "id": 1,
+      "service_type": "toilets",
+      "name": "Toilets",
+      "location": "in the indoor school and the main car park near the entrance"
+    }
   ]
 }

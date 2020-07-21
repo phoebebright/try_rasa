@@ -17,13 +17,17 @@ intents:
 - competitor
 - query_knowledge_base
 - need_service_provider
+- need_service
+- show_me_testsheet
 
 entities:
 - arena
 - user_type
 - service_provider
 - service_type
+- service
 - facility
+- testsheets
 - object_type
 - mention
 - attribute
@@ -60,6 +64,8 @@ slots:
   service_provider:
     type: unfeaturized
   service_type:
+    type: unfeaturized
+  service:
     type: unfeaturized
 responses:
   utter_greet:
@@ -128,4 +134,5 @@ actions:
 - utter_welcome_competitor
 - action_query_knowledge_base
 - action_service_providers
+- action_show_testsheet
 
