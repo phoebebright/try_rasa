@@ -15,6 +15,8 @@ from rasa_sdk.events import SlotSet
 from rasa_sdk.knowledge_base.storage import InMemoryKnowledgeBase
 from rasa_sdk.knowledge_base.actions import ActionQueryKnowledgeBase
 
+import json
+
 from rasa_sdk.knowledge_base.utils import (
     SLOT_OBJECT_TYPE,
     SLOT_LAST_OBJECT_TYPE,
@@ -214,21 +216,20 @@ class TestSheetKB(ActionQueryKnowledgeBase):
         object_type = "testsheet"
         attribute = "code"
 
+        url = f"http://localhost:8000/api/v2/testsheetlinks/?q={testsheet}"
 
+        result = requests.get(url)
 
-        objects = self.knowledge_base.data[object_type]
+        items = json.loads(result.text)
 
-        # filter objects by attributes
-        if service_type:
-            objects = list(
-                filter(
-                    lambda obj:
-                                obj[attribute] == service_type
-                                , objects,
-                )
-            )
+        if len(items) == 0:
+            response = f"I couldn't find any tests matching {testsheet}. Try entering the testsheet like this: Issuer Name, Number."
+        elif len(items) == 1:
+            sheet = items[0]
+            response = f"Provide option to <a href='{sheet['link']}'>view</a> or listen to {sheet['name']}"
+        else:
 
-        response = f"The following {service_type}s are available :\n" + '\n '.join([f"{obj['name']} call {obj['mobile']}" for obj in objects])
+            response = f"More than one test matches your request. please choose:"
 
         dispatcher.utter_message(response)
 

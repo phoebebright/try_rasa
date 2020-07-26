@@ -28,6 +28,7 @@ entities:
 - service
 - facility
 - testsheets
+- testsheet
 - object_type
 - mention
 - attribute
@@ -66,6 +67,10 @@ slots:
   service_type:
     type: unfeaturized
   service:
+    type: unfeaturized
+  testsheets:
+    type: list
+  testsheet:
     type: unfeaturized
 responses:
   utter_greet:

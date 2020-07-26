@@ -52,6 +52,8 @@ https://github.com/RasaHQ/rasa/tree/master/examples/concertbot/
 javascript widget:
 https://github.com/JiteshGaikwad/Chatbot-Widget
 
+weather
+https://github.com/RasaHQ/NLU-training-data/blob/master/weather/nlu.md
 
 
 Arriving at Event
